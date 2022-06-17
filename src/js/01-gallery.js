@@ -2,7 +2,7 @@
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-console.log(galleryItems);
+// console.log(galleryItems);
 
 // ------------------ Create and render markup according to the gallery template. -----------------
 
@@ -11,14 +11,15 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const createGalleryItemMarkup = ({ preview, original, description }) => {
   return `
-    <li>
-    <a clsss = "gallery__item" href = "${original}">
-    <img class = "gallery__image"
-    src = "${preview}"
-    alt = "${description}"
+    <a class="gallery__item" href="${original}">
+    <img
+    style="display:block"
+    class="gallery__image"
+    src="${preview}"
+    alt="${description}"
     />
-    </a>
-    </li>`;
+  </a>
+  `;
 };
 
 const createGalleryMarkup = galleryItems.map(createGalleryItemMarkup).join('');
