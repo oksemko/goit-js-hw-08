@@ -1,3 +1,6 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
@@ -5,9 +8,6 @@ import { galleryItems } from './gallery-items';
 // console.log(galleryItems);
 
 // ------------------ Create and render markup according to the gallery template. -----------------
-
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const createGalleryItemMarkup = ({ preview, original, description }) => {
   return `
@@ -35,3 +35,5 @@ let gallery = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
+
+console.log(galleryItems);
